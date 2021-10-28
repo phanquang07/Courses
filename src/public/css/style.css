@@ -1,2 +1,6 @@
 .card-courses-item {
   margin-top: 15px; }
+
+.dropdown-menu {
+  left: auto !important;
+  right: 0 !important; }

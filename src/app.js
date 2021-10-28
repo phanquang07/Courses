@@ -6,6 +6,8 @@ const { urlencoded, json } = require('express');
 const app = express();
 const port = 5000;
 
+app.use(urlencoded({ extended: true }));
+
 const route = require('./routes/indexRoute');
 const db = require('./config/db/indexConfig');
 // Route init
@@ -17,9 +19,6 @@ db.connect();
 // Static
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use(urlencoded({
-   extended: true
-}));
 app.use(json());
 
 // HTTP loger
@@ -27,7 +26,10 @@ app.use(morgan('combined'));
 
 // Template engine
 app.engine('hbs', handlebars({
-   extname: '.hbs'
+   extname: '.hbs',
+   helpers: {
+      sum: (a, b) => a + b,
+  }
 }));
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resources', 'views'));

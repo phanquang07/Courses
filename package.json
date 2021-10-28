@@ -10,23 +10,24 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Quang-IT/NodeJS_blog2.git"
+    "url": "git+https://github.com/phanquang07/Courses.git"
   },
   "keywords": [
-    "blog",
-    "nodeJS_blog",
+    "courses",
+    "nodeJS_courses",
     "nodeJS"
   ],
   "author": "Quang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Quang-IT/NodeJS_blog2/issues"
+    "url": "https://github.com/phanquang07/Courses/issues"
   },
-  "homepage": "https://github.com/Quang-IT/NodeJS_blog2#readme",
+  "homepage": "https://github.com/phanquang07/Courses#readme",
   "dependencies": {
     "express": "^4.17.1",
     "express-handlebars": "^5.3.3",
-    "mongoose": "^6.0.5"
+    "mongoose": "^6.0.5",
+    "mongoose-slug-generator": "^1.0.4"
   },
   "devDependencies": {
     "morgan": "^1.10.0",
